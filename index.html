@@ -1,0 +1,281 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>NORME</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="navbar">
+<div class="logo">NORME</div>
+
+<nav>
+<a href="#services">Services</a>
+<a href="#experience">Experience</a>
+<a href="#booking">Book</a>
+</nav>
+
+<a href="#booking" class="nav-btn">Contact</a>
+</header>
+
+<section class="hero">
+<div class="overlay"></div>
+
+<div class="hero-content">
+<span>PREMIUM CLEANING EXPERIENCE</span>
+
+<h1>Cleaning.<br>Reimagined.</h1>
+
+<p>
+Elegant cleaning and pest control services crafted for modern homes,
+luxury apartments and sophisticated workspaces.
+</p>
+
+<a href="#services" class="hero-btn">Explore Services</a>
+</div>
+</section>
+
+<section class="services" id="services">
+
+<div class="section-title">
+<span>PREMIUM SERVICES</span>
+<h2>Designed For Modern Living.</h2>
+</div>
+
+<div class="services-grid">
+
+<div class="glass-card">
+<img src="https://images.unsplash.com/photo-1497366754035-f200968a6e72?q=80&w=1200&auto=format&fit=crop">
+<h4>Deep Office Clean</h4>
+</div>
+
+<div class="glass-card">
+<img src="https://images.unsplash.com/photo-1524758631624-e2822e304c36?q=80&w=1200&auto=format&fit=crop">
+<h4>Carpet Cleaning</h4>
+</div>
+
+<div class="glass-card">
+<img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=80&w=1200&auto=format&fit=crop">
+<h4>Industrial Cleaning</h4>
+</div>
+
+<div class="glass-card">
+<img src="https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?q=80&w=1200&auto=format&fit=crop">
+<h4>Deep Flat Clean</h4>
+</div>
+
+<div class="glass-card">
+<img src="https://images.unsplash.com/photo-1484154218962-a197022b5858?q=80&w=1200&auto=format&fit=crop">
+<h4>Tiles & Floor Cleaning</h4>
+</div>
+
+<div class="glass-card">
+<img src="https://images.unsplash.com/photo-1555041469-a586c61ea9bc?q=80&w=1200&auto=format&fit=crop">
+<h4>Sofa Cleaning</h4>
+</div>
+
+<div class="glass-card">
+<img src="cockroach.jpg">
+<h4>Cockroach Control</h4>
+</div>
+
+<div class="glass-card">
+<img src="rat.jpg">
+<h4>Rat Control</h4>
+</div>
+
+<div class="glass-card">
+<img src="spider.jpg">
+<h4>Spider Control</h4>
+</div>
+
+</div>
+</section>
+
+<section class="experience" id="experience">
+
+<div class="experience-text">
+<span>WHY NORME</span>
+
+<h2>Experience<br>The Future<br>Of Cleaning.</h2>
+
+<p>
+Every NORME experience is carefully crafted with precision,
+modern design and premium service quality.
+</p>
+
+<div class="stats">
+<div><h3>12K+</h3><p>Clients Served</p></div>
+<div><h3>98%</h3><p>Satisfaction</p></div>
+<div><h3>24/7</h3><p>Support</p></div>
+</div>
+
+</div>
+
+<div class="experience-image">
+<img src="stairs-livingroom.png">
+</div>
+
+</section>
+
+<section class="booking" id="booking">
+
+<div class="booking-layout">
+
+<div class="booking-box">
+
+<div class="steps">
+<div class="step active" id="s1">1</div>
+<div class="line"></div>
+<div class="step" id="s2">2</div>
+<div class="line"></div>
+<div class="step" id="s3">3</div>
+</div>
+
+<div class="page active-page" id="page1">
+
+<h2>Your Details</h2>
+
+<div class="input-row">
+<input type="text" id="name" placeholder="Full Name">
+<input type="email" id="email" placeholder="Email Address">
+</div>
+
+<input type="text" id="phone" placeholder="Phone Number">
+
+<button onclick="nextPage(2)">Next: Choose Service</button>
+
+</div>
+
+<div class="page" id="page2">
+
+<h2>Choose Service</h2>
+
+<select id="service">
+<option>Deep Office Clean</option>
+<option>Carpet Cleaning</option>
+<option>Industrial Cleaning</option>
+<option>Deep Flat Clean</option>
+<option>Tiles & Floor Cleaning</option>
+<option>Sofa Cleaning</option>
+<option>Cockroach Control</option>
+<option>Rat Control</option>
+<option>Spider Control</option>
+</select>
+
+<input type="date" id="date">
+
+<div class="btn-row">
+<button class="back-btn" onclick="prevPage(1)">Back</button>
+<button onclick="nextPage(3)">Next: Confirm</button>
+</div>
+
+</div>
+
+<div class="page" id="page3">
+
+<h2>Confirm Booking</h2>
+
+<div class="summary">
+<p><strong>Name:</strong> <span id="confirmName"></span></p>
+<p><strong>Email:</strong> <span id="confirmEmail"></span></p>
+<p><strong>Phone:</strong> <span id="confirmPhone"></span></p>
+<p><strong>Service:</strong> <span id="confirmService"></span></p>
+<p><strong>Date:</strong> <span id="confirmDate"></span></p>
+</div>
+
+<textarea placeholder="Additional Notes"></textarea>
+
+<div class="btn-row">
+<button class="back-btn" onclick="prevPage(2)">Back</button>
+<button onclick="submitBooking()">Submit Booking</button>
+</div>
+
+<p id="success"></p>
+
+</div>
+
+</div>
+
+<div class="contact-card">
+
+<h1>Contact Information</h1>
+
+<div class="contact-item">
+<h3>PHONE</h3>
+<p>+8801731174977</p>
+</div>
+
+<div class="contact-item">
+<h3>EMAIL</h3>
+<p>support@norme.com</p>
+</div>
+
+<div class="contact-item">
+<h3>LOCATION</h3>
+<p>Gulshan-2, Dhaka, Bangladesh</p>
+</div>
+
+<iframe src="https://www.google.com/maps?q=Gulshan-2,+Dhaka,+Bangladesh&output=embed"></iframe>
+
+<div class="socials">
+<a href="https://www.facebook.com/share/18guujATPd/?mibextid=wwXIfr">
+<img src="https://cdn-icons-png.flaticon.com/512/733/733547.png">
+</a>
+
+<a href="https://www.instagram.com/norme.25?igsh=bXVrZ2ppZWc0dmlz">
+<img src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png">
+</a>
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<footer>
+<p>© 2026 NORME Cleaning Services</p>
+</footer>
+
+<script src="script.js"></script>
+
+
+<footer class="premium-footer">
+<div class="footer-container">
+
+<div class="footer-brand">
+<h2>NORME</h2>
+<p>
+Premium cleaning and pest control experience crafted for modern homes and elegant workspaces.
+</p>
+</div>
+
+<div class="footer-links">
+<h4>Navigation</h4>
+<a href="#services">Services</a>
+<a href="#experience">Experience</a>
+<a href="#book">Book</a>
+<a href="#contact">Contact</a>
+</div>
+
+<div class="footer-contact">
+<h4>Contact</h4>
+<p>+8801731174977</p>
+<p>support@norme.com</p>
+<p>Gulshan-2, Dhaka, Bangladesh</p>
+</div>
+
+</div>
+
+<div class="footer-bottom">
+© 2026 NORME. All rights reserved.
+</div>
+</footer>
+
+</body>
+</html>
